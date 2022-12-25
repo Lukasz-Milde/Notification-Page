@@ -1,5 +1,10 @@
-body {
-  background-color: pink;
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+h1 {
+  color: hsl(1deg, 90%, 64%);
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

@@ -1,0 +1,13 @@
+@use "abstracts" as *;
+
+@mixin hover {
+	cursor: pointer;
+	color: $blue;
+}
+
+@mixin span {
+	font-weight: map-get($font-weights, bold);
+	&:hover {
+		@include hover;
+	}
+}

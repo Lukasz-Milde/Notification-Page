@@ -1,12 +1,14 @@
-@use "abstracts" as *;
-@use "mixins" as *;
-
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 // &&&&&&&&&&&&&&___GENERALS___$$$$$$$$$$$$$$$$$$$$$$$$$$
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
+@use "abstracts" as *;
+@use "mixins" as *;
+
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 	font-family: "Plus Jakarta Sans", sans-serif;
 	font-size: 16px;
 }
@@ -15,17 +17,22 @@ body {
 	background-color: $body-color;
 }
 
-// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-// &&&&&&&&&&&&&&___MAIN CARD___$$$$$$$$$$$$$$$$$$$$$$$$$
-// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-
 .card {
 	margin: 3.5rem auto;
 	width: 50vw;
 	background-color: $card-bck;
 	border-radius: 17px;
 	padding: 1.5rem;
+	word-spacing: 0.13rem;
 }
+
+// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+// &&&&&&&&&&&&&&___MAIN CARD___$$$$$$$$$$$$$$$$$$$$$$$$$
+// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+//
+//
+//
+// ______________NAVIGATION______________________________
 
 .nav {
 	display: flex;
@@ -35,13 +42,62 @@ body {
 h1 {
 	font-weight: map-get($font-weights, bold);
 	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+
+	.nr-not {
+		margin-left: 1rem;
+		padding: 0.1rem 0.5rem;
+		border-radius: 5px;
+		font-size: 0.9rem;
+		color: white;
+		background-color: $blue;
+	}
 }
 
-.nr-not {
-	margin-left: 1rem;
-	padding: 0.1rem 0.5rem;
-	border-radius: 5px;
-	font-size: 1rem;
-	color: white;
-	background-color: $blue;
+.marked {
+	align-self: center;
+	font-size: 0.85rem;
+
+	&:hover {
+		@include hover;
+	}
+}
+
+// ______________COMMENT______________________________
+//
+//
+//
+
+.cm-section {
+	display: grid;
+	grid-template-columns: 10% 90%;
+	grid-template-rows: 1fr 2fr;
+	grid-template-areas: "header header";
+}
+
+.comment {
+	width: 47vw;
+	display: grid;
+	grid-template-columns: 10% 90%;
+	color: $light-grey;
+	img {
+		align-self: center;
+		justify-self: center;
+		height: 2.5rem;
+	}
+}
+
+.name {
+	@include span;
+	color: black;
+}
+
+.item {
+	@include span;
+	color: $Very-dark-blue;
+}
+
+.priv {
+	justify-self: center;
 }

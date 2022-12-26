@@ -1,10 +1,38 @@
 * {
   box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
 }
 
+body {
+  background-color: hsl(210deg, 60%, 98%);
+}
+
+.card {
+  margin: 3.5rem auto;
+  width: 50vw;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 17px;
+  padding: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 h1 {
-  color: hsl(1deg, 90%, 64%);
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.nr-not {
+  margin-left: 1rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: white;
+  background-color: hsl(219deg, 85%, 26%);
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

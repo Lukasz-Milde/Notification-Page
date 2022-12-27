@@ -23,6 +23,7 @@ body {
 	background-color: $card-bck;
 	border-radius: 17px;
 	padding: 1.5rem;
+	padding-bottom: 0;
 	word-spacing: 0.13rem;
 }
 
@@ -37,6 +38,7 @@ body {
 .nav {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 2rem;
 }
 
 h1 {
@@ -70,17 +72,18 @@ h1 {
 //
 
 .cm-section {
-	display: grid;
-	grid-template-columns: 10% 90%;
-	grid-template-rows: 1fr 2fr;
-	grid-template-areas: "header header";
+	@include grid;
 }
 
 .comment {
 	width: 47vw;
-	display: grid;
-	grid-template-columns: 10% 90%;
+	@include grid;
+	grid-template-areas: "header header" ". priv";
+	margin: 0.7rem 0;
+	border-radius: 7px;
+	padding: 0.8rem 0.5rem;
 	color: $light-grey;
+	line-height: 1.5rem;
 	img {
 		align-self: center;
 		justify-self: center;
@@ -100,4 +103,22 @@ h1 {
 
 .priv {
 	justify-self: center;
+	grid-area: priv;
+	margin-top: 0.7rem;
+	padding: 1rem;
+	border-radius: 7px;
+	background-color: $priv;
+	line-height: 1.2rem;
+}
+
+.kimberly {
+	position: relative;
+	.k-pic {
+		position: absolute;
+		right: 1rem;
+	}
+}
+
+.unmarked {
+	background-color: $light-blue;
 }

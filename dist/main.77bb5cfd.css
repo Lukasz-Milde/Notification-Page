@@ -16,12 +16,14 @@ body {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 17px;
   padding: 1.5rem;
+  padding-bottom: 0;
   word-spacing: 0.13rem;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 h1 {
@@ -51,15 +53,18 @@ h1 .nr-not {
 .cm-section {
   display: grid;
   grid-template-columns: 10% 90%;
-  grid-template-rows: 1fr 2fr;
-  grid-template-areas: "header header";
 }
 
 .comment {
   width: 47vw;
   display: grid;
   grid-template-columns: 10% 90%;
+  grid-template-areas: "header header" ". priv";
+  margin: 0.7rem 0;
+  border-radius: 7px;
+  padding: 0.8rem 0.5rem;
   color: hsl(208deg, 8%, 36%);
+  line-height: 1.5rem;
 }
 .comment img {
   align-self: center;
@@ -87,6 +92,24 @@ h1 .nr-not {
 
 .priv {
   justify-self: center;
+  grid-area: priv;
+  margin-top: 0.7rem;
+  padding: 1rem;
+  border-radius: 7px;
+  background-color: hsla(211deg, 50%, 83%, 0.3);
+  line-height: 1.2rem;
+}
+
+.kimberly {
+  position: relative;
+}
+.kimberly .k-pic {
+  position: absolute;
+  right: 1rem;
+}
+
+.unmarked {
+  background-color: hsla(205deg, 41%, 89%, 0.3);
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

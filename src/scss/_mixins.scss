@@ -11,3 +11,8 @@
 		@include hover;
 	}
 }
+
+@mixin grid {
+	display: grid;
+	grid-template-columns: 10% 90%;
+}

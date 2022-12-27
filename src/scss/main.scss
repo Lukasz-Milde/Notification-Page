@@ -101,14 +101,22 @@ h1 {
 	color: $Very-dark-blue;
 }
 
+.flx {
+	display: flex;
+	flex-direction: column;
+}
+
 .priv {
 	justify-self: center;
 	grid-area: priv;
 	margin-top: 0.7rem;
 	padding: 1rem;
 	border-radius: 7px;
-	background-color: $priv;
 	line-height: 1.2rem;
+	&:hover {
+		cursor: pointer;
+		background-color: $priv;
+	}
 }
 
 .kimberly {
@@ -117,6 +125,21 @@ h1 {
 		position: absolute;
 		right: 1rem;
 	}
+}
+
+// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+// &&&&&&&&&&&&&&___JS STYLES___$$$$$$$$$$$$$$$$$$$$$$$$$
+// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+//
+//
+//
+
+.dot {
+	display: inline-block;
+	height: 8px;
+	width: 8px;
+	background-color: $red;
+	border-radius: 50%;
 }
 
 .unmarked {

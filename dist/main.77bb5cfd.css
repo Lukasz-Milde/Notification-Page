@@ -90,14 +90,22 @@ h1 .nr-not {
   color: hsl(219deg, 85%, 26%);
 }
 
+.flx {
+  display: flex;
+  flex-direction: column;
+}
+
 .priv {
   justify-self: center;
   grid-area: priv;
   margin-top: 0.7rem;
   padding: 1rem;
   border-radius: 7px;
-  background-color: hsla(211deg, 50%, 83%, 0.3);
   line-height: 1.2rem;
+}
+.priv:hover {
+  cursor: pointer;
+  background-color: hsla(211deg, 50%, 83%, 0.3);
 }
 
 .kimberly {
@@ -106,6 +114,14 @@ h1 .nr-not {
 .kimberly .k-pic {
   position: absolute;
   right: 1rem;
+}
+
+.dot {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  background-color: hsl(1deg, 90%, 64%);
+  border-radius: 50%;
 }
 
 .unmarked {

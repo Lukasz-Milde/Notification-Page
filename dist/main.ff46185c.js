@@ -180,8 +180,14 @@ var btn = document.getElementById("marked");
 var red = document.querySelectorAll(".dot");
 var bck = document.querySelectorAll(".unmarked");
 btn.addEventListener("click", function () {
-  red.classList.remove("dot");
-  bck.classList.remove("unmarked");
+  red.forEach(removeDot);
+  function removeDot(element) {
+    element.classList.remove("dot");
+  }
+  bck.forEach(removeBck);
+  function removeBck(element) {
+    element.classList.remove("unmarked");
+  }
 });
 },{"./src/scss/main.scss":"scss/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -208,7 +214,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56502" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59876" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

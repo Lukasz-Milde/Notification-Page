@@ -4,6 +4,12 @@ const red = document.querySelectorAll(".dot");
 const bck = document.querySelectorAll(".unmarked");
 
 btn.addEventListener("click", () => {
-	red.classList.remove("dot");
-	bck.classList.remove("unmarked");
+	red.forEach(removeDot);
+	function removeDot(element) {
+		element.classList.remove("dot");
+	}
+	bck.forEach(removeBck);
+	function removeBck(element) {
+		element.classList.remove("unmarked");
+	}
 });

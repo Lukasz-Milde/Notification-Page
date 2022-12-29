@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: hsl(210deg, 60%, 98%);
+  background-color: pink;
 }
 
 .card {
@@ -116,6 +116,15 @@ h1 .nr-not {
   right: 1rem;
 }
 
+@media (max-width: 375px) {
+  .card {
+    width: 100vw;
+    margin: 0;
+  }
+  .card .comment {
+    width: 87.5vw;
+  }
+}
 .dot {
   display: inline-block;
   height: 8px;
@@ -125,7 +134,7 @@ h1 .nr-not {
 }
 
 .unmarked {
-  background-color: hsla(205deg, 41%, 89%, 0.3);
+  background-color: greenyellow;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: pink;
+  background-color: hsl(210deg, 60%, 98%);
 }
 
 .card {
@@ -56,7 +56,7 @@ h1 .nr-not {
 }
 
 .comment {
-  width: 47vw;
+  width: 47.5vw;
   display: grid;
   grid-template-columns: 10% 90%;
   grid-template-areas: "header header" ". priv";
@@ -110,12 +110,72 @@ h1 .nr-not {
 
 .kimberly {
   position: relative;
+  padding-right: 40px;
 }
 .kimberly .k-pic {
   position: absolute;
-  right: 1rem;
+  right: 0;
+  top: 1rem;
 }
 
+@media (max-width: 1400px) {
+  .comment {
+    width: 47vw;
+  }
+}
+@media (max-width: 1400px) {
+  .comment {
+    width: 46vw;
+    grid-template-columns: 11% 89%;
+  }
+}
+@media (max-width: 1200px) {
+  .comment {
+    width: 46vw;
+    grid-template-columns: 12% 88%;
+  }
+}
+@media (max-width: 1000px) {
+  .comment {
+    grid-template-columns: 15% 85%;
+  }
+  .comment p,
+  .comment .name,
+  .comment .item {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 800px) {
+  .comment {
+    width: 45vw;
+    grid-template-columns: 19% 81%;
+  }
+  .comment p,
+  .comment .name,
+  .comment .item {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 750px) {
+  .card {
+    width: 100vw;
+    margin: 0;
+  }
+  .card .comment {
+    width: 93.5vw;
+    grid-template-columns: 10% 90%;
+  }
+}
+@media (max-width: 600px) {
+  .card {
+    width: 100vw;
+    margin: 0;
+  }
+  .card .comment {
+    width: 90vw;
+    grid-template-columns: 15% 85%;
+  }
+}
 @media (max-width: 375px) {
   .card {
     width: 100vw;
@@ -123,6 +183,7 @@ h1 .nr-not {
   }
   .card .comment {
     width: 87.5vw;
+    grid-template-columns: 20% 80%;
   }
 }
 .dot {
@@ -134,7 +195,7 @@ h1 .nr-not {
 }
 
 .unmarked {
-  background-color: greenyellow;
+  background-color: hsla(205deg, 41%, 89%, 0.3);
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

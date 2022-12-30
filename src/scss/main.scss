@@ -14,7 +14,7 @@
 }
 
 body {
-	background-color: pink;
+	background-color: $body-color;
 }
 
 .card {
@@ -76,7 +76,7 @@ h1 {
 }
 
 .comment {
-	width: 47vw;
+	width: 47.5vw;
 	@include grid;
 	grid-template-areas: "header header" ". priv";
 	margin: 0.7rem 0;
@@ -121,9 +121,11 @@ h1 {
 
 .kimberly {
 	position: relative;
+	padding-right: 40px;
 	.k-pic {
 		position: absolute;
-		right: 1rem;
+		right: 0;
+		top: 1rem;
 	}
 }
 
@@ -134,12 +136,80 @@ h1 {
 //
 //
 
+@media (max-width: 1400px) {
+	.comment {
+		width: 47vw;
+	}
+}
+
+@media (max-width: 1400px) {
+	.comment {
+		width: 46vw;
+		grid-template-columns: 11% 89%;
+	}
+}
+
+@media (max-width: 1200px) {
+	.comment {
+		width: 46vw;
+		grid-template-columns: 12% 88%;
+	}
+}
+
+@media (max-width: 1000px) {
+	.comment {
+		grid-template-columns: 15% 85%;
+		p,
+		.name,
+		.item {
+			font-size: 0.8rem;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.comment {
+		width: 45vw;
+		grid-template-columns: 19% 81%;
+		p,
+		.name,
+		.item {
+			font-size: 0.8rem;
+		}
+	}
+}
+
+@media (max-width: 750px) {
+	.card {
+		width: 100vw;
+		margin: 0;
+
+		.comment {
+			width: 93.5vw;
+			grid-template-columns: 10% 90%;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.card {
+		width: 100vw;
+		margin: 0;
+
+		.comment {
+			width: 90vw;
+			grid-template-columns: 15% 85%;
+		}
+	}
+}
+
 @media (max-width: 375px) {
 	.card {
 		width: 100vw;
 		margin: 0;
 		.comment {
 			width: 87.5vw;
+			grid-template-columns: 20% 80%;
 		}
 	}
 }
@@ -160,5 +230,5 @@ h1 {
 }
 
 .unmarked {
-	background-color: greenyellow;
+	background-color: $light-blue;
 }

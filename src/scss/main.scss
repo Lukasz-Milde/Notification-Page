@@ -204,6 +204,9 @@ h1 {
 }
 
 @media (max-width: 375px) {
+	h1 {
+		font-size: 1.1rem;
+	}
 	.card {
 		width: 100vw;
 		margin: 0;

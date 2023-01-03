@@ -8,6 +8,11 @@
 		"build": "parcel build src/index.html",
 		"deploy": "gh-pages -d dist"
 	},
+	"targets": {
+		"default": {
+			"distDir": "./docs"
+		}
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Lukasz-Milde/Notification-Page.git"

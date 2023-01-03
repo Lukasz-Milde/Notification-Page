@@ -5,13 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "parcel src/index.html",
-		"build": "parcel build src/index.html",
+		"build": "parcel build src/index.html --out-dir docs --public-url /Notification-Page",
 		"deploy": "gh-pages -d dist"
-	},
-	"targets": {
-		"default": {
-			"distDir": "./docs"
-		}
 	},
 	"repository": {
 		"type": "git",
